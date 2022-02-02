@@ -1,2 +1,2 @@
-###LIB COMMON
-This is the basic architecture used by my applications.
+# LibBase
+Framework for my applications

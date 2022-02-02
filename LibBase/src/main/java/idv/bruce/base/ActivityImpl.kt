@@ -84,6 +84,9 @@ abstract class ActivityImpl : AppCompatActivity() {
 
     abstract fun initView()
 
+    /**
+     * This function will called when autoStartService is false and Service was not created
+     */
     abstract fun onServiceNotStart()
 
     private val serviceConnection: ServiceConnection = object : ServiceConnection {
@@ -101,6 +104,7 @@ abstract class ActivityImpl : AppCompatActivity() {
 
             initView()
         }
+
 
         override fun onServiceDisconnected(p0: ComponentName?) {
             viewModelInstanceList.forEach {
